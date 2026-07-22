@@ -671,7 +671,7 @@
             &#8592; Anterior        
         </button>        
         <button class="btn-wizard btn-wizard-next" id="btnNext" onclick="changePage(1)">            
-            Próximo &#8594;        
+            Começar &#8594;        
         </button>    
     </div>
 </div>
@@ -879,9 +879,11 @@
             document.getElementById('btnNext').classList.remove('invisible-btn');            
             if (currentPage === totalPages - 1) {                
                 document.getElementById('btnNext').innerHTML = "AVANÇAR PARA APOSENTADORIA &#128187;";            
+            } else if (currentPage === 1) {
+                document.getElementById('btnNext').innerHTML = "COMEÇAR &#8594;";
             } else {                
                 document.getElementById('btnNext').innerHTML = "Próximo &#8594;";            
-            }        
+            }                
         }
         const progressPercent = (currentPage / totalPages) * 100;        
         document.getElementById('progressBar').style.width = `${progressPercent}%`;        
